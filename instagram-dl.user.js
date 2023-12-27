@@ -201,7 +201,20 @@
     }, 500);
 
     function append2Post(node, btn) {
-        node.append(btn);
+        let sectionNode = node.parentNode.parentNode;
+        sectionNode.append(btn);
+
+        // styling
+        sectionNode.style.display = 'flex';
+        sectionNode.style.alignItems = 'center';
+        sectionNode.style.height = '40px';
+        sectionNode.style.justifyContent = 'center';
+        sectionNode.style.flexWrap = 'wrap';
+        sectionNode.style.columnGap = '16px';
+        
+        // todo until redoing other methods
+        btn.style.marginLeft = 'unset';
+        btn.style.marginTop = 'unset';
     }
 
     function append2IndependentPost(node, btn) {
